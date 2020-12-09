@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>10kterm</title>
+	<link href="10kterm.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="term-screen">
+        <div id="topBar" class="fixed top" style="display:block">
+            <div class="title-bar text-center">
+                <span class="pull-left" id="time" style="margin-left:20px;">
+                    11:11
+                </span>
+                <span>
+                    h4x0r r3m0t3 t3rm1na1
+                </span>
+                <span class="pull-right" id="wifi" style="margin-right:20px;">
+                    100%
+                </span>
+            </div>
+        </div>
+        <div id="xt1" class="fixed middle-bottom x-term-window expand" style="display:none;">
+            <div class="title-bar">
+                x-term-10k
+            </div>
+            <div class="x-term-body">
+                <div id="x-term-1">
+                </div>
+                <p>
+                    <span class="caret">></span>
+                </p>
+            </div>
+        </div>
+        <div class="fixed mid-left x-term-window expand" id="satMap" style="display:none">
+            <div class="title-bar">
+                satMap
+            </div>
+            <div class="x-term-body">
+                <img src="world_less_green.png" alt="" class="color" />
+				<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 501 251" style="position:absolute;top:11px;width:501px;">
+					<path d="M0,125 C250,-100 250,351 501,125" fill="rgba(0,0,0,0)" stroke="black" stroke-width="6" class="dash-move" />
+					<path d="M0,125 C250,-100 250,351 501,125" fill="rgba(0,0,0,0)" stroke="lightgreen" stroke-width="3" class="dash-move" />
+				</svg>
+            </div>
+        </div>
+        <div id="dbFaceMatch" class="fixed x-term-window top-middle expand" style="display:none">
+            <div class="title-bar">
+                TRUCRIME(TM) FacialRecog
+            </div>
+            <div class="x-term-body">
+                <h3 class="db-face-h3">FACIAL RECOGNITION DATABASE QUERY</h3>
+                <div class="db-face-panel">
+                    <div id="dbFaceContainer" class="green-tint" style="width:150px;">
+                        <img id="dbFace" src="" alt="facial recognition image" style="width:150px;" />
+                    </div>
+                </div>
+                <div class="db-face-panel" style="width:220px;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    <span>SEARCH IN PROGRESS</span>
+                                    <span class="blink ">.</span>
+                                    <span class="blink delay-200">.</span>
+                                    <span class="blink delay-400">.</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>NAME</th>
+                                <td id="dbName"></td>
+                            </tr>
+                            <tr>
+                                <th>DOB</th>
+                                <td id="dbDOB"></td>
+                            </tr>
+                            <tr>
+                                <th>PH#</th>
+                                <td id="dbPH"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="width:220px;">
+                        <h4 class="db-face-h4">SEARCH IN PROGRESS</h4>
+                        <div id="dbMd5"></div>
+                        <div id="dbSha1"></div>
+                        <div id="dbSha256"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cracking" class="fixed x-term-window top-right expand" style="display:none">
+            <div class="title-bar">
+                crackerHacker v2.54
+            </div>
+            <div class="x-term-body">
+                <div class="text-center">
+                    <pre style="font: 10px/7px monospace">                          ;##'                             
+' ';`.;+@@@@@.,#;;, ;   :  @@`..      ; ,;;#,.@@@@@+;,`;' '
+ @'`'@@@@@@@@@;   ,  :  #,`,         ;  ,   ;@@@@@@@@@'`'@ 
+  +@@@@@@+++@@@ '@@#    ; #    ++      +@@' @@@+++@@@@@@+  
+ `@@@@@@@`@@@@@@'##@           @@.     @##'@@@@@@`@@@@@@@  
+ ;#.   ,'@+#@@@@,++@ `    ,.   @#:   ` @++.@@@@#+@',   .#; 
+     `;@@@';@+:@ ,@@      .  ,.;@;     @@,`@:+@';@@@;`     
+   +;@@@@@#@#'#@@:,@      '##';@ @     @,:@@#'#@#@@@@@;+   
+    # ..  #@'`:@@.##, '  #@@:@@@@;  ' .##.@@:`'@#  `. #    
+      #@@@@@@:#;;,@,@ `+.@.#+.@:,+@@` @,@,;;#,@@@@@@@      
+      @:.',`#@@:'`@@@@ #@@@@@@@@@@@# @@@#`';@@#`,'.:@      
+         ;#@@@@@ @@@@#@#+'''''''''##@#@@@@`@@@@@#'         
+          @;:#@@@@,;@++#+'''''''''##++@;,@@@@#:;@          
+             @,`@@@;`'.#+'''''''''##.'`;@@@`,@             
+               ',:@@@`.#+'''''''''##.`@@@:,;               
+               ,':,;@#@##:'`#.;;,+#@@@@',,',               
+                  . .@`##:'`#.;;,+#@`@. ,                  
+                  `,#,###:'`#.;;,+#@#,#,.                  
+                      '##:'`#.;;,+#@'`                     
+                       :#:'`#.;;,+#`                       
+                       `;:'`#.;;,+.                        
+                       :#`  :.,  .@,                       
+                       @'@'@#.+#:@+@                       
+                      .# @#@' ,@#@ #,                      
+          .`;:;';#:`, '@;,@:, +:@`;@'         ',           
+      ++;;+''#'.;:+ :,+'##@:   ;@.'@+    `'  ; +`;         
+      ;#+#+;,'`;+':+;,#   #,   `#;;:+#:.:++ +`#'; '        
+       ''+,': #'+#+#+.      .###++;, #+:,,#'; .,:, '       
+        ,+`,.+';:+::;` ,++   ';.:+,#:  `;#'':,';;:'        
+             `'#'                           .' ''          
+</pre>
+                    <h3>
+                        DOD REMOTE LOGIN
+                    </h3>
+                    <div id="crackerBody">
+                        <strong>USERNAME</strong>
+                        <strong class="box" id="dodUser">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+						&nbsp;
+                        <strong>PASSWORD</strong>
+                        <strong class="box progress-bar" id="dodPass">
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                            <span class="">*</span>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+			<div class="title-bar">
+				Testing <span id="dodNumerator">1</span> of 89385734 combinations&nbsp;&nbsp;
+			</div>
+        </div>
+        <div id="cctv" class="fixed x-term-window top-left expand" style="display:none">
+            <div class="title-bar">
+				ipcam.tv
+            </div>
+            <div class="x-term-body">
+                <div class="cctv-container">
+                    <img src="400x300-1.gif" alt="cctv footage" id="cctvImg" />
+                </div>
+            </div>
+        </div>
+        <div id="scrollSource" class="fixed x-term-window bottom-right expand" style="display:none">
+            <div class="title-bar">
+                /* Random Source Scrolling v.0.3 */
+            </div>
+            <div class="x-term-body">
+                <div id="scrollSourceBody">
+                    <pre class="margin-loop"></pre>
+                </div>
+            </div>
+            <div class="title-bar">
+                /** currently viewing <span>datagram.c</span>  */
+            </div>
+        </div>
+		<div id="linkBack" class="fix x-term-window mid-mid expand" style="display:none">
+            <div class="title-bar">
+                10kterm > about
+            </div>
+			<div class="x-term-body">
+				<a href="../.." class="ar-logo">Back to Home</a>
+			</div>
+		</div>
+        <div id="bottom-term" class="fixed bottom" style="display:none">
+
+        </div>
+    </div>
+    <footer>
+        <div id="x-term-1-script">
+            <p>
+                > -- Welcome to X Terminal 10k --
+            </p>
+            <p>
+                > x-term-10k opt
+            </p>
+            <div>
+                <p>
+                    > ---- listing options
+                </p>
+                <p>
+                    > -- add-widget [widget-name] [widget-layout]
+                </p>
+                <p>
+                    > -- start-widget [widget-name]
+                </p>
+                <p>
+                    > -- configure-widget [args...]
+                </p>
+                <p>
+                    > -- spawn-sibling
+                </p>				
+            </div>
+			<p>
+				> add-widget scrolling-source bottom-right
+			</p>
+			<p>
+				> start-widget scrolling-source
+			</p>
+			<p>
+				> add-widget war-games-cracker top-right
+			</p>
+			<p>
+				> start-widget war-games-cracker
+			</p>
+			<p>
+				> add-widget camera-feeds top-left
+			</p>
+			<p>
+				> start-widget camera-feeds
+			</p>
+        </div>
+        <div id="bottom-term-script">
+            <p>
+                Power on complete
+            </p>
+            <p>
+                Initializing bootstrapping module...
+            </p>
+            <p>
+                Bootstrap loaded into memory - check
+            </p>
+            <p>
+                Console output - check
+            </p>
+            <p>
+                Core diagnostics running...
+            </p>
+            <p>
+                Core diagnostic - optimal
+            </p>
+            <p>
+                Memory diagnostics running...
+            </p>
+            <p>
+                Memory diagnostic - clean
+            </p>
+            <span>Initializing X server</span>
+            <span>.</span><span>.</span><span>.</span>
+            <p>
+                X server running...
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="10kterm.js"></script>
+</body>
+</html>

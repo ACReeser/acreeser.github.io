@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solar</title>
+    <link href="solar.css" rel="stylesheet"/>
+    <!--drop in styles for logo-->
+    <style>.ar-abs-logo{background-image:url(../../content/images/arLogoPerspective.svg);height:144px;width:144px;position:fixed;top:2px;left:0;color:transparent;cursor:pointer;z-index:1;opacity:.5;-moz-transition:opacity,transform ease 1s;-o-transition:opacity,transform ease 1s;-webkit-transition:opacity,transform ease 1s;transition:opacity,transform ease 1s}.ar-abs-logo:hover{opacity:1;-moz-transform:scale(1.1);-ms-transform:scale(1.1);-o-transform:scale(1.1);-webkit-transform:scale(1.1);transform:scale(1.1)}</style>
+</head>
+<body>
+    <a href="../.." class="ar-abs-logo">Back to Home</a>
+	<div class="warp-warning"></div>
+    <div>
+        <canvas></canvas>
+        <div class="sun-wrapper">
+            <div>
+                <div class="sun sun-scroll">
+                    <img src="sun-burn-outline2.png" alt="" class="sun-flares" />
+                </div>
+            </div>
+        </div>
+        <div class="planet earth zoom-info do-pause nav">
+            <img src="earthshadow.png" alt="" class="svg-shadow do-pause">
+            <div class="moon"></div>
+            <div class="zoom-info-panel">
+                <h3 class="text-center">EARTH</h3>
+            </div>
+        </div>
+        <div class="planet mars zoom-info do-pause nav">
+            <img src="shadow.png" alt="" class="svg-shadow svg-shadow-2 do-pause">
+            <div class="zoom-info-panel">
+                <h3 class="text-center">MARS</h3>
+            </div>
+        </div>
+    </div>
+    <script src="solar.js"></script>
+</body>
+</html>

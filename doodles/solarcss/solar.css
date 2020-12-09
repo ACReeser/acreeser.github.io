@@ -1,0 +1,223 @@
+﻿html,body{ 
+	height:100%;
+	width:100%;
+}
+body{
+	background-color:black;
+	margin:0;
+}
+canvas{
+	position:absolute;
+	left:0;
+	top:0;
+}
+/**
+ * Move in a circle without wrapper elements
+ * Idea by Aryeh Gregor, simplified by Lea Verou
+ */
+
+@keyframes rot {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes rot-1 {
+	from {
+		transform: rotate(0deg)
+		           translate(-150px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-150px) 
+		           rotate(-360deg);
+	}
+}
+@keyframes rot-2 {
+	from {
+		transform: rotate(0deg)
+		           translate(-300px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-300px) 
+		           rotate(-360deg);
+	}
+}
+@keyframes rot-moon {
+	from {
+		transform: rotate(0deg)
+		           translate(-50px)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-50px) 
+		           rotate(-360deg);
+	}
+}
+@keyframes sun-scroll {
+	from {
+		background-position:0 0;
+		transform: rotate(0deg);
+	}
+	to {
+		background-position:-830px 0;
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.atmosphere {
+/*background: -moz-radial-gradient(center, ellipse cover,  rgba(206,225,255,1) 0%, rgba(161,203,242,1) 56%, rgba(153,199,240,0.7) 66%, rgba(125,185,232,0) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(206,225,255,1)), color-stop(56%,rgba(161,203,242,1)), color-stop(66%,rgba(153,199,240,0.7)), color-stop(100%,rgba(125,185,232,0)));
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(206,225,255,1) 0%,rgba(161,203,242,1) 56%,rgba(153,199,240,0.7) 66%,rgba(125,185,232,0) 100%);
+background: -o-radial-gradient(center, ellipse cover,  rgba(206,225,255,1) 0%,rgba(161,203,242,1) 56%,rgba(153,199,240,0.7) 66%,rgba(125,185,232,0) 100%);
+background: -ms-radial-gradient(center, ellipse cover,  rgba(206,225,255,1) 0%,rgba(161,203,242,1) 56%,rgba(153,199,240,0.7) 66%,rgba(125,185,232,0) 100%);
+background: radial-gradient(ellipse at center,  rgba(206,225,255,1) 0%,rgba(161,203,242,1) 56%,rgba(153,199,240,0.7) 66%,rgba(125,185,232,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cee1ff', endColorstr='#007db9e8',GradientType=1 );
+
+background: -moz-radial-gradient(center, ellipse cover,  rgba(56,115,255,1) 29%, rgba(170,200,247,0.55) 40%, rgba(213,228,251,0.51) 41%, rgba(255,255,255,0.55) 42%, rgba(0,0,0,1) 53%, rgba(0,0,0,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(29%,rgba(56,115,255,1)), color-stop(40%,rgba(170,200,247,0.55)), color-stop(41%,rgba(213,228,251,0.51)), color-stop(42%,rgba(255,255,255,0.55)), color-stop(53%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1)));
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(56,115,255,1) 29%,rgba(170,200,247,0.55) 40%,rgba(213,228,251,0.51) 41%,rgba(255,255,255,0.55) 42%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+background: -o-radial-gradient(center, ellipse cover,  rgba(56,115,255,1) 29%,rgba(170,200,247,0.55) 40%,rgba(213,228,251,0.51) 41%,rgba(255,255,255,0.55) 42%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover,  rgba(56,115,255,1) 29%,rgba(170,200,247,0.55) 40%,rgba(213,228,251,0.51) 41%,rgba(255,255,255,0.55) 42%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+background: radial-gradient(ellipse at center,  rgba(56,115,255,1) 29%,rgba(170,200,247,0.55) 40%,rgba(213,228,251,0.51) 41%,rgba(255,255,255,0.55) 42%,rgba(0,0,0,1) 53%,rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3873ff', endColorstr='#000000',GradientType=1 );*/
+
+	z-index:1;
+}
+.sun-wrapper{
+	width:100px;
+	height:100px;
+	position: absolute;
+	top: 50%;
+	top: calc(50% - 25px);
+	left: 50%;
+	left: calc(50% - 25px);
+	margin: -50px;
+}
+.sun{
+	width:100px;
+	height:100px;
+	background-image:url("sun2.jpg");
+    background-position-x:0;
+	border-radius:50%;
+	animation: sun-scroll 30s infinite linear;
+}
+.sun-flares{
+  position: absolute;
+  z-index: -1;
+  top: -25px;
+  left: -25px;
+  animation: spin 60s infinite linear;
+}
+.planet {
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -33px;
+	border-radius:50%;
+}
+.earth{
+	animation: rot-1 10s infinite linear;
+	top: calc(50% - 11px);
+	left: calc(50% - 11px);
+}
+.mars{
+	top: calc(50% - 33px);
+	left: calc(50% - 33px);
+    background-image: url("mars_red.png");
+	animation: rot-2 15s infinite linear;
+}
+
+.moon{
+	width: 11px;
+	height: 11px;
+	position: absolute;
+	top: 50%;
+	top: calc(50% - 7px);
+	left: 50%;
+	left: calc(50% - 7px);
+	margin: 0;
+	border-radius:10px;
+	background-color: grey;
+	animation: rot-moon 2s infinite linear;
+}
+
+.zoom-info:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border: 0 solid #ddd;
+    display: block;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+}
+.zoom-info:hover{
+    cursor:pointer;
+}
+.zoom-info.open:after{
+  border-width:2px;
+  width: 400px;
+  height: 200px;
+  margin: -123px;
+  margin-left: -81px;
+}
+.zoom-info-panel{
+  opacity: 0;
+  height: 0;
+  width: 221px;
+  background-color: #ddd;
+  margin-left: 100px;
+}
+.open .zoom-info-panel{
+  height: 203px;
+  opacity: 1;
+  transition: height .25s linear .25s;
+  position: absolute;
+  top: -75px;
+}
+.svg-shadow{
+    animation: rot 10s infinite linear;
+}
+.svg-shadow-2{
+    animation-duration: 15s;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.warp-warning{
+	position:absolute;
+	width:calc(100% - 20px);
+	height:calc(100% - 20px);
+}
+.warp-warning.on{
+	border:10px solid red;
+}
+.hidden{
+	display:none!important;
+}
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused; 
+    animation-play-state:paused;
+}

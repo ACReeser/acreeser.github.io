@@ -1,0 +1,27 @@
+{
+  "name": "gh-pages-template",
+  "version": "1.0.0",
+  "description": "alexreeser.me",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt-zetzer": "~2.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-zetzer": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACReeser/gh-pages-template.git"
+  },
+  "author": "ACReeser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ACReeser/gh-pages-template/issues"
+  },
+  "homepage": "https://github.com/ACReeser/gh-pages-template"
+}
