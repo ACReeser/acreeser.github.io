@@ -4,6 +4,8 @@
   "description": "alexreeser.me",
   "main": "gruntfile.js",
   "dependencies": {
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
     "grunt-zetzer": "~2.0.0"
   },
   "devDependencies": {
@@ -12,7 +14,8 @@
     "grunt-zetzer": "^2.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "static-build": "node ./scripts/static-build"
   },
   "repository": {
     "type": "git",
