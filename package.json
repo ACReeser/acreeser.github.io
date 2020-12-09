@@ -3,19 +3,16 @@
   "version": "1.0.0",
   "description": "alexreeser.me",
   "main": "gruntfile.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
-    "grunt-zetzer": "~2.0.0"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-zetzer": "^2.0.0"
+    "watch": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "static-build": "node ./scripts/static-build"
+    "static-build": "node ./scripts/static-build",
+    "watch": "watch \"npm run static-build\" \"./partials\""
   },
   "repository": {
     "type": "git",
