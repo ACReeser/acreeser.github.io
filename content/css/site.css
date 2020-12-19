@@ -345,6 +345,9 @@ h2.hex-header .square-link{
     padding-top: 17px;
     padding-bottom: 12px;
 }
+.pull-r{
+	float:right;
+}
 .mrg-t-10{
     margin-top: 10px;
 }
@@ -357,6 +360,12 @@ h2.hex-header .square-link{
     margin:0 10px 0 0;
     padding:10px;
     text-decoration:none;
+}
+img.thumb{
+	border-radius:20px;
+	width: 150px;
+	border: 1px solid #DA5023;
+	margin-top: -74px;
 }
 a.no-line{
     text-decoration:none;
@@ -435,6 +444,9 @@ a.no-line{
 	}
 	.view-container{
 		margin:0 10px;
+	}
+	img.thumb{
+		width: 100px;
 	}
 }
 .transform-center{ -moz-transform-origin:center; -ms-transform-origin:center; -o-transform-origin:center; -webkit-transform-origin:center; transform-origin:center; }
