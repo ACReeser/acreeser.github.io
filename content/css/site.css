@@ -264,10 +264,12 @@ header.animated-gradient {
 	display:block;
 	width:86.6%;
 }
-.hex a:hover polygon{
+.hex a:hover polygon,
+.hex a:active polygon{
 	fill: rgb(240, 90,40);
 }
-.hex a:hover text{
+.hex a:hover text,
+.hex a:active text{
 	fill: white;
 }
 .hex.offset{
@@ -328,8 +330,26 @@ h3.hex-header{
     top: 0;
     left: 100%;
 }
+h3.hex-header.short-tail,
+h2.hex-header.short-tail{
+	padding-right: 50px;
+}
+.hex-header .square-link{
+	margin-left: 28px;
+	text-decoration: underline dotted white;
+    padding-top: 15.2px;
+    padding-bottom: 14px;
+    font-size: 16px;
+}
+h2.hex-header .square-link{
+    padding-top: 17px;
+    padding-bottom: 12px;
+}
 .mrg-t-10{
     margin-top: 10px;
+}
+.mrg-l-0, .hex-header a.mrg-l-0{
+	margin-left: 0;
 }
 .square-link{
     color:white;
