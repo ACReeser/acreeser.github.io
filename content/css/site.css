@@ -151,14 +151,6 @@ code.inline{
 .view-container{
 	margin-left:144px;
 }
-.byte-container{
-	width:610px;
-	margin:auto;
-}
-.byte-link{
-	display:inline-block;
-	width:300px;
-}
 .gallery{
 	text-align:center;
 }
@@ -267,6 +259,22 @@ header.animated-gradient {
 	height: 144px;
 	width: 144px;
 	display: block;
+}
+.hex{
+	display:block;
+	width:86.6%;
+}
+.hex a:hover polygon{
+	fill: rgb(240, 90,40);
+}
+.hex a:hover text{
+	fill: white;
+}
+.hex.offset{
+	margin-left: 86.6px;
+}
+.hex.sibling{
+	margin-top: -50px;
 }
 .hex-header{
     display: inline-block;
@@ -486,10 +494,6 @@ a.no-line{
     }
 	.home-stripe > .hex-2{
 		height:400px;
-	}   
-	.byte-link, .byte-container{
-		width:100%;
-		display: block;
 	}
 
 }
