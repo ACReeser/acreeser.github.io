@@ -41,6 +41,9 @@ h1{
 	font-size:64px;
 	font-family:'Source Sans Pro' 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+h4.underline{
+	border-bottom: 1px solid #333;
+}
 .blue{
 	background-color:#1499D3;
 }
