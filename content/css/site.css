@@ -368,6 +368,9 @@ h2.hex-header .square-link{
 .pull-r{
 	float:right;
 }
+.pull-l{
+	float: left;
+}
 .mrg-t-10{
     margin-top: 10px;
 }
